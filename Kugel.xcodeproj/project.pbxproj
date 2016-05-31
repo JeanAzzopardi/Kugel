@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0578BE291CFD96250097AAE4 /* Kugel OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 0578BE281CFD96250097AAE4 /* Kugel OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0578BE371CFD963C0097AAE4 /* Kugel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578BE261CFD96250097AAE4 /* Kugel.framework */; };
+		0578BE3D1CFD966D0097AAE4 /* Kugel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035C26C1B4F9E61005E331C /* Kugel.swift */; };
+		0578BE3E1CFD97480097AAE4 /* KugelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035C2621B4F9E56005E331C /* KugelTests.swift */; };
 		C035C2561B4F9E56005E331C /* Kugel.h in Headers */ = {isa = PBXBuildFile; fileRef = C035C2551B4F9E56005E331C /* Kugel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C035C25C1B4F9E56005E331C /* Kugel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C035C2501B4F9E56005E331C /* Kugel.framework */; };
 		C035C2631B4F9E56005E331C /* KugelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035C2621B4F9E56005E331C /* KugelTests.swift */; };
 		C035C26D1B4F9E61005E331C /* Kugel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035C26C1B4F9E61005E331C /* Kugel.swift */; };
-		C035C26E1B4F9F63005E331C /* Kugel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035C26C1B4F9E61005E331C /* Kugel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0578BE381CFD963C0097AAE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C035C2471B4F9E56005E331C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0578BE251CFD96250097AAE4;
+			remoteInfo = "Kugel OSX";
+		};
 		C035C25D1B4F9E56005E331C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C035C2471B4F9E56005E331C /* Project object */;
@@ -25,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0578BE261CFD96250097AAE4 /* Kugel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kugel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0578BE281CFD96250097AAE4 /* Kugel OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kugel OSX.h"; sourceTree = "<group>"; };
+		0578BE2A1CFD96250097AAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0578BE321CFD963C0097AAE4 /* Kugel OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kugel OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0578BE361CFD963C0097AAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C035C2501B4F9E56005E331C /* Kugel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kugel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C035C2541B4F9E56005E331C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C035C2551B4F9E56005E331C /* Kugel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kugel.h; sourceTree = "<group>"; };
@@ -35,6 +50,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0578BE221CFD96250097AAE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0578BE2F1CFD963C0097AAE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0578BE371CFD963C0097AAE4 /* Kugel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C035C24C1B4F9E56005E331C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,11 +83,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0578BE271CFD96250097AAE4 /* Kugel OSX */ = {
+			isa = PBXGroup;
+			children = (
+				0578BE281CFD96250097AAE4 /* Kugel OSX.h */,
+				0578BE2A1CFD96250097AAE4 /* Info.plist */,
+			);
+			path = "Kugel OSX";
+			sourceTree = "<group>";
+		};
+		0578BE331CFD963C0097AAE4 /* Kugel OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				0578BE361CFD963C0097AAE4 /* Info.plist */,
+			);
+			path = "Kugel OSXTests";
+			sourceTree = "<group>";
+		};
 		C035C2461B4F9E56005E331C = {
 			isa = PBXGroup;
 			children = (
 				C035C2521B4F9E56005E331C /* Kugel */,
 				C035C25F1B4F9E56005E331C /* KugelTests */,
+				0578BE271CFD96250097AAE4 /* Kugel OSX */,
+				0578BE331CFD963C0097AAE4 /* Kugel OSXTests */,
 				C035C2511B4F9E56005E331C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +116,8 @@
 			children = (
 				C035C2501B4F9E56005E331C /* Kugel.framework */,
 				C035C25B1B4F9E56005E331C /* KugelTests.xctest */,
+				0578BE261CFD96250097AAE4 /* Kugel.framework */,
+				0578BE321CFD963C0097AAE4 /* Kugel OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +160,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0578BE231CFD96250097AAE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0578BE291CFD96250097AAE4 /* Kugel OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C035C24D1B4F9E56005E331C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,6 +179,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0578BE251CFD96250097AAE4 /* Kugel OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0578BE2B1CFD96250097AAE4 /* Build configuration list for PBXNativeTarget "Kugel OSX" */;
+			buildPhases = (
+				0578BE211CFD96250097AAE4 /* Sources */,
+				0578BE221CFD96250097AAE4 /* Frameworks */,
+				0578BE231CFD96250097AAE4 /* Headers */,
+				0578BE241CFD96250097AAE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kugel OSX";
+			productName = "Kugel OSX";
+			productReference = 0578BE261CFD96250097AAE4 /* Kugel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0578BE311CFD963C0097AAE4 /* Kugel OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0578BE3A1CFD963C0097AAE4 /* Build configuration list for PBXNativeTarget "Kugel OSXTests" */;
+			buildPhases = (
+				0578BE2E1CFD963C0097AAE4 /* Sources */,
+				0578BE2F1CFD963C0097AAE4 /* Frameworks */,
+				0578BE301CFD963C0097AAE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0578BE391CFD963C0097AAE4 /* PBXTargetDependency */,
+			);
+			name = "Kugel OSXTests";
+			productName = "Kugel OSXTests";
+			productReference = 0578BE321CFD963C0097AAE4 /* Kugel OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C035C24F1B4F9E56005E331C /* Kugel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C035C2661B4F9E56005E331C /* Build configuration list for PBXNativeTarget "Kugel" */;
@@ -162,10 +257,16 @@
 		C035C2471B4F9E56005E331C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Scoop, Inc.";
 				TargetAttributes = {
+					0578BE251CFD96250097AAE4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0578BE311CFD963C0097AAE4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					C035C24F1B4F9E56005E331C = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -187,12 +288,28 @@
 			projectRoot = "";
 			targets = (
 				C035C24F1B4F9E56005E331C /* Kugel */,
+				0578BE251CFD96250097AAE4 /* Kugel OSX */,
 				C035C25A1B4F9E56005E331C /* KugelTests */,
+				0578BE311CFD963C0097AAE4 /* Kugel OSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0578BE241CFD96250097AAE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0578BE301CFD963C0097AAE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C035C24E1B4F9E56005E331C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +327,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0578BE211CFD96250097AAE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0578BE3D1CFD966D0097AAE4 /* Kugel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0578BE2E1CFD963C0097AAE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0578BE3E1CFD97480097AAE4 /* KugelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C035C24B1B4F9E56005E331C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C035C26E1B4F9F63005E331C /* Kugel.swift in Sources */,
 				C035C2631B4F9E56005E331C /* KugelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +362,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0578BE391CFD963C0097AAE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0578BE251CFD96250097AAE4 /* Kugel OSX */;
+			targetProxy = 0578BE381CFD963C0097AAE4 /* PBXContainerItemProxy */;
+		};
 		C035C25E1B4F9E56005E331C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C035C24F1B4F9E56005E331C /* Kugel */;
@@ -238,6 +375,82 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0578BE2C1CFD96250097AAE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Kugel OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeanazzopardi.Kugel-OSX";
+				PRODUCT_NAME = Kugel;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0578BE2D1CFD96250097AAE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Kugel OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeanazzopardi.Kugel-OSX";
+				PRODUCT_NAME = Kugel;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0578BE3B1CFD963C0097AAE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Kugel OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeanazzopardi.Kugel-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0578BE3C1CFD963C0097AAE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kugel OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeanazzopardi.Kugel-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		C035C2641B4F9E56005E331C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,6 +611,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0578BE2B1CFD96250097AAE4 /* Build configuration list for PBXNativeTarget "Kugel OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0578BE2C1CFD96250097AAE4 /* Debug */,
+				0578BE2D1CFD96250097AAE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0578BE3A1CFD963C0097AAE4 /* Build configuration list for PBXNativeTarget "Kugel OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0578BE3B1CFD963C0097AAE4 /* Debug */,
+				0578BE3C1CFD963C0097AAE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C035C24A1B4F9E56005E331C /* Build configuration list for PBXProject "Kugel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

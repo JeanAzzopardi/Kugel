@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Scoop, Inc. All rights reserved.
 //
 
-import UIKit
 import XCTest
+import Kugel
 
 class KugelTests: XCTestCase {
     
@@ -41,35 +41,35 @@ class KugelTests: XCTestCase {
 
     func testPublishNotification() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onTestNotificationReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onTestNotificationReceived(_:)))
         Kugel.publish(testNotification)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
     
     func testPublishName() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onNameReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onNameReceived(_:)))
         Kugel.publish(NotificationName)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
     
     func testPublishNameObject() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onNameObjectReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onNameObjectReceived(_:)))
         Kugel.publish(NotificationName, object: NotificationObject)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
     
     func testPublishNameUserInfoObject() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onNameObjectUserInfoReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onNameObjectUserInfoReceived(_:)))
         Kugel.publish(NotificationName, object: NotificationObject, userInfo: NotificationUserInfo)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
     
     func testPublishNameUserInfo() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onNameUserInfoReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onNameUserInfoReceived(_:)))
         Kugel.publish(NotificationName, userInfo: NotificationUserInfo)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
@@ -88,14 +88,14 @@ class KugelTests: XCTestCase {
     
     func testSubscribeNameSelector() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onNameReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onNameReceived(_:)))
         Kugel.publish(NotificationName)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
     
     func testSubscribeNameObjectSelector() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onNameObjectReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onNameObjectReceived(_:)))
         Kugel.publish(NotificationName, object: NotificationObject)
         waitForExpectationsWithTimeout(TestTimeout) { _ in }
     }
@@ -104,8 +104,8 @@ class KugelTests: XCTestCase {
         expectation1 = expectationWithDescription("NotificationExceptation1")
         expectation2 = expectationWithDescription("NotificationExceptation2")
         Kugel.subscribe(self, [
-            NotificationName1: "onName1Received:",
-            NotificationName2: "onName2Received:"
+            NotificationName1: #selector(KugelTests.onName1Received(_:)),
+            NotificationName2: #selector(KugelTests.onName2Received(_:))
         ])
         Kugel.publish(NotificationName1)
         Kugel.publish(NotificationName2)
@@ -116,8 +116,8 @@ class KugelTests: XCTestCase {
         expectation1 = expectationWithDescription("NotificationExceptation1")
         expectation2 = expectationWithDescription("NotificationExceptation2")
         Kugel.subscribe(self, [
-            NotificationName1: "onNameObject1Received:",
-            NotificationName2: "onNameObject2Received:"
+            NotificationName1: #selector(KugelTests.onNameObject1Received(_:)),
+            NotificationName2: #selector(KugelTests.onNameObject2Received(_:))
         ], object: NotificationObject)
         Kugel.publish(NotificationName1, object: NotificationObject)
         Kugel.publish(NotificationName2, object: NotificationObject)
@@ -139,7 +139,7 @@ class KugelTests: XCTestCase {
     
     func testUnsubscribeName() {
         expectation = expectationWithDescription("NotificationExceptation")
-        Kugel.subscribe(self, name: NotificationName, selector: "onUnexpectedNotificationReceived:")
+        Kugel.subscribe(self, name: NotificationName, selector: #selector(KugelTests.onUnexpectedNotificationReceived(_:)))
         Kugel.unsubscribe(self, name: NotificationName)
         Kugel.publish(NotificationName)
         expectation.fulfill()
@@ -149,8 +149,8 @@ class KugelTests: XCTestCase {
     func testUnsubscribeNames() {
         expectation = expectationWithDescription("NotificationExceptation")
         Kugel.subscribe(self, [
-            NotificationName1: "onUnexpectedNotificationReceived:",
-            NotificationName2: "onUnexpectedNotificationReceived:"
+            NotificationName1: #selector(KugelTests.onUnexpectedNotificationReceived(_:)),
+            NotificationName2: #selector(KugelTests.onUnexpectedNotificationReceived(_:))
         ])
         Kugel.unsubscribe(self, [
             NotificationName1,
@@ -165,8 +165,8 @@ class KugelTests: XCTestCase {
     func testUnsubscribeAll() {
         expectation = expectationWithDescription("NotificationExceptation")
         Kugel.subscribe(self, [
-            NotificationName1: "onUnexpectedNotificationReceived:",
-            NotificationName2: "onUnexpectedNotificationReceived:"
+            NotificationName1: #selector(KugelTests.onUnexpectedNotificationReceived(_:)),
+            NotificationName2: #selector(KugelTests.onUnexpectedNotificationReceived(_:))
         ])
         Kugel.unsubscribe(self)
         Kugel.publish(NotificationName1)
@@ -178,8 +178,8 @@ class KugelTests: XCTestCase {
     func testUnsubscribeObjectAll() {
         expectation = expectationWithDescription("NotificationExceptation")
         Kugel.subscribe(self, [
-            NotificationName1: "onUnexpectedNotificationReceived:",
-            NotificationName2: "onUnexpectedNotificationReceived:"
+            NotificationName1: #selector(KugelTests.onUnexpectedNotificationReceived(_:)),
+            NotificationName2: #selector(KugelTests.onUnexpectedNotificationReceived(_:))
         ], object: NotificationObject)
         Kugel.unsubscribe(self)
         Kugel.publish(NotificationName1, object: NotificationObject)
