@@ -21,10 +21,6 @@ public class Kugel {
     public class func publish(name: String, object: AnyObject? = nil, userInfo: [NSObject: AnyObject]? = nil) {
         notificationCenter.postNotificationName(name, object: object, userInfo: userInfo)
     }
-
-    public class func publish(name: CustomStringConvertible, object: AnyObject? = nil, userInfo: [NSObject: AnyObject]? = nil) {
-        notificationCenter.postNotificationName(name.description, object: object, userInfo: userInfo)
-    }
     
     // Subscribe
     
@@ -34,19 +30,10 @@ public class Kugel {
         }
     }
 
-    public class func subscribe(name: CustomStringConvertible, block: (NSNotification -> Void)) -> NSObjectProtocol {
-        return notificationCenter.addObserverForName(name.description, object: nil, queue: nil) { notification in
-            block(notification)
-        }
-    }
-
     public class func subscribe(observer: AnyObject, name: String, selector: Selector, object: AnyObject? = nil) {
         return notificationCenter.addObserver(observer, selector: selector, name: name, object: object)
     }
 
-    public class func subscribe(observer: AnyObject, name: CustomStringConvertible, selector: Selector, object: AnyObject? = nil) {
-        return notificationCenter.addObserver(observer, selector: selector, name: name.description, object: object)
-    }
     
     public class func subscribe(observer: AnyObject, _ notifications: [String: Selector], object: AnyObject? = nil) {
         for (name, selector) in notifications {
@@ -59,10 +46,6 @@ public class Kugel {
     
     public class func unsubscribe(observer: AnyObject, name: String? = nil, object: AnyObject? = nil) {
         return notificationCenter.removeObserver(observer, name: name, object: nil)
-    }
-
-    public class func unsubscribe(observer: AnyObject, name: CustomStringConvertible? = nil, object: AnyObject? = nil) {
-        return notificationCenter.removeObserver(observer, name: name?.description, object: nil)
     }
     
     public class func unsubscribe(observer: AnyObject, _ names: [String], object: AnyObject? = nil) {
